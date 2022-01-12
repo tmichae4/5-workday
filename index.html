@@ -4,59 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work day schedule</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
+    <link rel="stylesheet" href="./js/style.css"/>
+
+    <title>Work Schedule</title>
+
 </head>
 <body>
+    <header class= "jumbotron">
+        <p class="lead">Calander app to schedule work day</p>
+        <p id="currentDay" class="lead"></p>
+    </header>
+    
+
     <div class="container">
-        <input type="text" class="txtb" placeholder="Add a task">
-        <div class="notcomp">
-            <h3>Not Completed</h3>
-
-           
-
-        </div>
-
-        <div class="comp">
-            <h3>Completed</h3>
-        </div>
+        <div id="0700" class="row time-block">
+        <div class="col-md-1">7 AM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi-lock-locked"></span>
+        </button>
+    </div>
+    
+        <div id="0800" class="row time-block">
+        <div class="col-md-1">8 AM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
     </div>
 
-    <script type="text/javascript">
-    $(".txtb").on("keyup",function(e){
-        //13 means enter button
-        if(e.keyCode == 13 && $(".txtb").val() != "")
-        {
-            var task = $("<div class='task'></div>").text($(".txtb").val());
-            var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
-                var p = $(this).parent();
-                p.fadeOut(function(){
-                    p.remove();
-                });
-        });
-
-
-            var check = $("<i class='fas fa-check'></i>").click(function(){
-                var p = $(this).parent();
-                p.fadeOut(function(){
-                    $(".comp").append(p);
-                    p.fadeIn()
-                });
-                $(this).remove();
-            });
-            
-
-
-            task.append(del,check);
-            $(".notcomp").append(task);
-            //to clear 
-            $(".txtb").val("");
-            
-        }
-    });
-    </script>
+        <div id="0900" class="row time-block">
+        <div class="col-md-1">9 AM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+ 
+        <div id="0700" class="row time-block">
+        <div class="col-md-1">10 AM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
     
+        <div id="1100" class="row time-block">
+        <div class="col-md-1">11 AM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+    
+        <div id="1200" class="row time-block">
+        <div class="col-md-1">12 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+    
+        <div id="1300" class="row time-block">
+        <div class="col-md-1">1 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+    
+        <div id="1400" class="row time-block">
+        <div class="col-md-1">2 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+   
+        <div id="1500" class="row time-block">
+        <div class="col-md-1">3 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+   
+        <div id="1600" class="row time-block">
+        <div class="col-md-1">4 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+   
+        <div id="1700" class="row time-block">
+        <div class="col-md-1">5 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+
+        <div id="1800" class="row time-block">
+        <div class="col-md-1">6 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+    <div id="1900" class="row time-block">
+        <div class="col-md-1">7 PM</div>
+        <textarea class="col task"></textarea>
+        <button class="col-1 saveBtn d-flex justify-content-center align-items-center">
+            <span class="oi oi-lock-locked"></span>
+        </button>
+    </div>
+    
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
