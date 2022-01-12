@@ -8,4 +8,7 @@
 then created function storing localStorage <br></br>
 then made time blocks for each hour from 7 am to 7 pm. 
 <h3> Links </h3>
+https://tmichae4.github.io/5-workday/
 
+<h4>Author</h4>
+Tia Michaels
